@@ -66,7 +66,7 @@ echo Setup erfolgreich abgeschlossen!
 echo ====================================
 echo.
 echo Sie können jetzt AutoBANF verwenden:
-echo   python autoBANF.py testfiles\mouser.xlsx
+echo   python autoBANF.py templates\mouser.xlsx
 echo.
 echo Hinweise:
 echo - Bei der ersten Ausführung werden Sie nach SAP-Anmeldedaten gefragt
