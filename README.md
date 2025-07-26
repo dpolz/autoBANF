@@ -1,6 +1,6 @@
 # AutoBANF
 
-**Automatische SAP BANF-Erstellung mit Excel-Import**
+**Automatischer Import von Excel zu GISA easyBANF**
 
 AutoBANF ist ein Python-Tool zur automatisierten Erstellung von Bestellanforderungen (BANF) in SAP-Systemen. Das Tool liest Excel-Dateien ein und füllt automatisch SAP-Formulare aus.
 
@@ -8,8 +8,7 @@ AutoBANF ist ein Python-Tool zur automatisierten Erstellung von Bestellanforderu
 
 ### 1. Repository klonen
 ```bash
-git clone [REPOSITORY-URL]
-cd AutoBANF
+git clone (https://github.com/dpolz/autoBANF)
 ```
 
 ### 2. Setup ausführen
@@ -22,18 +21,18 @@ Das Setup-Script:
 - Erstellt automatisch ein Python Virtual Environment
 - Installiert alle benötigten Pakete
 - Richtet den Playwright Browser ein
-- Erstellt die requirements.txt
 
 ### 3. Programm starten
 ```cmd
-python autoBANF.py testfiles\mouser.xlsx
+venv\Scripts\activate
+python autoBANF.py templates\mouser.xlsx
 ```
 
 ## 📋 Systemvoraussetzungen
 
 - **Python 3.8 oder höher** (von [python.org](https://python.org))
 - **Windows** (getestet auf Windows 10/11)
-- **Internet-Verbindung** für SAP-Zugang
+- **VPN-Verbindung** für SAP-Zugang
 
 ## 📊 Excel-Format
 
