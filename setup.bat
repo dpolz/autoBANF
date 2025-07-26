@@ -60,10 +60,6 @@ if errorlevel 1 (
     echo Das Programm funktioniert möglicherweise nicht korrekt.
 )
 
-REM Requirements.txt erstellen
-echo Erstelle requirements.txt...
-pip freeze > requirements.txt
-
 echo.
 echo ====================================
 echo Setup erfolgreich abgeschlossen!
