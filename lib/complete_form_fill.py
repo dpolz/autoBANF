@@ -5,7 +5,7 @@ complete_form_fill.py - Vollständiges Ausfüllen aller gewünschten Felder
 
 import time
 import json
-from autobanf_base import (
+from .autobanf_base import (
     navigate_to_artikel_page, 
     close_browser_safely,
     SecureCredentials

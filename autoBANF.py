@@ -7,14 +7,14 @@ import sys
 import time
 import os
 import pandas as pd
-from autobanf_base import (
+from lib.autobanf_base import (
     navigate_to_artikel_page, 
     close_browser_safely,
     SecureCredentials
 )
 
 # Import der Funktionen aus complete_form_fill.py
-from complete_form_fill import (
+from lib.complete_form_fill import (
     fill_text_field,
     fill_numeric_field,
     select_dropdown_option,
