@@ -489,7 +489,7 @@ def excel_import_test(excel_filename):
         time.sleep(1)
         
         # Temp-Ordner für Screenshots erstellen
-        temp_dir = "temp"
+        temp_dir = ".temp"
         if not os.path.exists(temp_dir):
             os.makedirs(temp_dir)
             print(f">> Temp-Ordner '{temp_dir}' erstellt")
