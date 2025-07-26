@@ -26,7 +26,7 @@ class SecureCredentials:
     
     def __init__(self, config_file="autobanf_config.enc"):
         # Credentials-Ordner erstellen falls nicht vorhanden
-        self.cred_dir = Path("credentials")
+        self.cred_dir = Path(".credentials")
         self.cred_dir.mkdir(exist_ok=True)
         
         self.config_file = self.cred_dir / config_file
