@@ -68,8 +68,20 @@ def select_category_robust(page, main_category, subcategory, artikel_nr):
         if not dialog_already_open:
             # Dialog muss geöffnet werden
             print(f"   Dialog ist geschlossen - öffne für Artikel {artikel_nr}")
+            
+            # Erst nach oben scrollen, damit der Button sichtbar ist
+            print("   Scrolle nach oben um Kategorie-Button sichtbar zu machen...")
+            page.evaluate("window.scrollTo(0, 0)")
+            time.sleep(2)
+            
             kategorie_button = page.locator("text=Kategorie auswählen")
             if kategorie_button.count() > 0:
+                # Falls der Button noch nicht sichtbar ist, nochmal versuchen zu scrollen
+                if not kategorie_button.first.is_visible():
+                    print("   Button noch nicht sichtbar - scrolle nochmal...")
+                    kategorie_button.first.scroll_into_view_if_needed()
+                    time.sleep(0.5)
+                
                 kategorie_button.click()
                 time.sleep(1.5)
                 print("   Dialog geöffnet")
@@ -80,7 +92,7 @@ def select_category_robust(page, main_category, subcategory, artikel_nr):
             print(f"   Dialog bereits offen für Artikel {artikel_nr}")
         
         # Schritt 2: Warten bis Dialog vollständig geladen ist
-        time.sleep(1)
+        time.sleep(3)
         
         # Schritt 3: Hauptkategorie aufklappen (falls nötig)
         print(f"   Klappe Hauptkategorie '{main_category}' auf...")
